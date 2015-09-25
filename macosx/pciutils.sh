@@ -6,7 +6,7 @@ wget -v -nd -c ftp://ftp.kernel.org/pub/software/utils/pciutils/${PCIUTILS}.tar.
 tar xvjf ${PCIUTILS}.tar.bz2
 patch -p0 < patches/${PCIUTILS}.diff
 cd ${PCIUTILS}
-make OPT="-O2 -arch i386 -arch x86_64" LDFLAGS="-arch i386 -arch x86_64" install
+make OPT="-O2 -arch i386 -arch x86_64" LDFLAGS="-arch i386 -arch x86_64" install install-lib
 cd -
 rm -rf ${PCIUTILS}{,.tar.bz2}
 
